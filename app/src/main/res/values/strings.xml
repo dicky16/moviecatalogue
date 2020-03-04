@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">MovieCatalogue</string>
+
+    <string name="tab_text_1">Movie</string>
+    <string name="tab_text_2">Tv Show</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_tab_text">This is Tab</string>
+    <string name="settings">Setting</string>
+    <string name="overview">Overview</string>
+    <string name="language">en-US</string>
+    <string name="disconnect">no internet connection</string>
+    <string name="img_poster">img_poster</string>
+    <string name="movie_catalogue">Movie Catalogue</string>
+    <string name="favorite">Favorite</string>
+    <string name="movie">Movie Favorite</string>
+    <string name="tv_favorite">Tv Favorite</string>
+    <string name="delete_favorite">Delete all from Favorite ?</string>
+    <string name="added">added</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">search</string>
+    <string name="search_movie">Search Movie</string>
+    <string name="search_tv">Search Tv</string>
+    <string name="add_widget">Add widget</string>
+
+    <string name="appwidget_text">Favorite Movie</string>
+    <string name="empty_text">No Data</string>
+    <string name="release_today_summary">Reminder showing the movie that released today</string>
+    <string name="daily_reminder_summary">Reminder for return to app</string>
+    <string name="key_release">release</string>
+    <string name="release_reminder">Release Reminder</string>
+    <string name="key_reminder">key_reminder</string>
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="today_release">today release</string>
+    <string name="Language">Language</string>
+    <string name="key_language">key_language</string>
+    <string name="repeat_notif">CatalogueMovie is missing you</string>
+    <!--    result-->
+    <string name="search_result">Search result for </string>
+    <string name="daily_notif">Daily reminder ON</string>
+    <string name="daily_notif_off">Daily reminder OFF</string>
+    <string name="daily_release_off">Daily release OFF</string>
+    <string name="daily_release_on">Daily release ON</string>
+
+</resources>

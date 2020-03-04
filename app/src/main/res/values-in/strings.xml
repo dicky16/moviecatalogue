@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_text_1">Film</string>
+    <string name="tab_text_2">Acara Tv</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_tab_text">Ini adalah</string>
+    <string name="settings">Pengaturan</string>
+    <string name="overview">Gambaran</string>
+    <string name="language">id-ID</string>
+    <string name="disconnect">Tidak terhubung ke internet</string>
+    <string name="favorite">Kesukaan</string>
+    <string name="movie">Film Kesukaan</string>
+    <string name="tv_favorite">Tv Kesukaan</string>
+    <string name="delete_favorite">Hapus dari Favorite ?</string>
+    <string name="added">ditambahkan</string>
+    <string name="yes">Ya</string>
+    <string name="cancel">Batal</string>
+
+    <string name="search_result">Hasil pencarian untuk </string>
+    <string name="daily_notif">Alarm setiap hari menyala</string>
+    <string name="daily_notif_off">Alarm setiap hari mati</string>
+    <string name="daily_release_off">Alarm rilis menyala</string>
+    <string name="daily_release_on">Alarm rilis mati</string>
+</resources>
