@@ -4,8 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <uses-permission android:name="com.example.moviecatalogue.READ_DATABASE"/>
-    <uses-permission android:name="com.example.moviecatalogue.WRITE_DATABASE"/>
+    <uses-permission android:name="com.example.moviecatalogue.prov.READ_DATABASE" />
 
     <application
         android:allowBackup="true"

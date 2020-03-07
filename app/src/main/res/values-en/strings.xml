@@ -23,4 +23,22 @@
     <string name="daily_notif_off">Daily reminder OFF</string>
     <string name="daily_release_off">Daily release OFF</string>
     <string name="daily_release_on">Daily release ON</string>
+
+    <string name="select_language">Select Language</string>
+    <string name="notification">Notification</string>
+
+    <string name="empty_text">No Data</string>
+    <string name="release_today_summary">Reminder showing the movie that released today</string>
+    <string name="daily_reminder_summary">Reminder for return to app</string>
+    <string name="release_reminder">Release Reminder</string>
+    <string name="today_release">today release</string>
+    <string name="Language">Language</string>
+    <string name="repeat_notif">CatalogueMovie is missing you</string>
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="search">search</string>
+    <string name="search_movie">Search Movie</string>
+    <string name="search_tv">Search Tv</string>
+    <string name="add_widget">Add widget</string>
+    <string name="see">See </string>
+    <string name="more">more</string>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.moviecatalogue.db;
 
+import android.database.Cursor;
+
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -10,7 +12,6 @@ import androidx.room.Query;
 import com.example.moviecatalogue.model.FavoriteMovieModel;
 import com.example.moviecatalogue.model.FavoriteTvModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Dao
@@ -43,4 +44,10 @@ public interface FavoriteDao {
 
     @Query("DELETE FROM tb_favorite_tv")
     void deleteAllFavTv();
+
+    @Query("SELECT * FROM tb_favorite_movie")
+    Cursor selectAllMovie();
+
+    @Query("SELECT * FROM tb_favorite_movie where id = :uid")
+    Cursor selectById(long uid);
 }

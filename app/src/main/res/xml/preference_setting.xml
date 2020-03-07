@@ -6,11 +6,11 @@
         android:title="@string/Language">
         <Preference
             android:key="@string/key_language"
-            android:summary="Select Language"
+            android:summary="@string/select_language"
             android:title="@string/Language"/>
     </PreferenceCategory>
     <PreferenceCategory
-        android:title="Notification">
+        android:title="@string/notification">
             <SwitchPreference
                 app:key="@string/key_release"
                 app:title="@string/release_reminder"

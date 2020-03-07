@@ -23,4 +23,22 @@
     <string name="daily_notif_off">Alarm setiap hari mati</string>
     <string name="daily_release_off">Alarm rilis menyala</string>
     <string name="daily_release_on">Alarm rilis mati</string>
+
+    <string name="select_language">Pilih bahasa</string>
+    <string name="notification">Pemberitahuan</string>
+
+    <string name="empty_text">Tidak ada data</string>
+    <string name="release_today_summary">Pengingat menampilkan film yang dirilis hari ini</string>
+    <string name="daily_reminder_summary">Pengingat untuk kembali ke aplikasi</string>
+    <string name="release_reminder">Pengingat rilis</string>
+    <string name="today_release">Rilis hari ini</string>
+    <string name="Language">Bahasa</string>
+    <string name="repeat_notif">CatalogueMovie merindukanmu</string>
+    <string name="daily_reminder">Pengingat harian</string>
+    <string name="search">search</string>
+    <string name="search_movie">Cari film</string>
+    <string name="search_tv">Cari acara tv</string>
+    <string name="add_widget">Add widget</string>
+    <string name="see">Lihat </string>
+    <string name="more">lainnya</string>
 </resources>

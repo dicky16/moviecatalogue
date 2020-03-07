@@ -1,16 +1,6 @@
 package com.example.moviecatalogue.model;
 
-import android.database.Cursor;
-
 import com.google.gson.annotations.SerializedName;
-
-import static android.provider.BaseColumns._ID;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.DATE;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.OVERVIEW;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.POSTER_PATH;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.TITLE;
-import static com.example.moviecatalogue.helper.DatabaseContract.getColumnInt;
-import static com.example.moviecatalogue.helper.DatabaseContract.getColumnString;
 
 public class ResultsItem {
 
@@ -72,13 +62,13 @@ public class ResultsItem {
     public ResultsItem() {
     }
 
-    public ResultsItem(Cursor cursor) {
-        this.id = getColumnInt(cursor, _ID);
-        this.title = getColumnString(cursor, TITLE);
-        this.posterPath = getColumnString(cursor, POSTER_PATH);
-        this.releaseDate = getColumnString(cursor, DATE);
-        this.overview = getColumnString(cursor, OVERVIEW);
-    }
+//    public ResultsItem(Cursor cursor) {
+//        this.id = getColumnInt(cursor, _ID);
+//        this.title = getColumnString(cursor, TITLE);
+//        this.posterPath = getColumnString(cursor, POSTER_PATH);
+//        this.releaseDate = getColumnString(cursor, DATE);
+//        this.overview = getColumnString(cursor, OVERVIEW);
+//    }
 
     @Override
     public String toString() {

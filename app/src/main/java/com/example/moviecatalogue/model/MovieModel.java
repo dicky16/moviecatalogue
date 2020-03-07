@@ -1,16 +1,7 @@
 package com.example.moviecatalogue.model;
 
-import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import static android.provider.BaseColumns._ID;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.DATE;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.OVERVIEW;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.POSTER_PATH;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.TITLE;
-import static com.example.moviecatalogue.helper.DatabaseContract.getColumnInt;
-import static com.example.moviecatalogue.helper.DatabaseContract.getColumnString;
 
 public class MovieModel implements Parcelable{
     private int id;
@@ -31,13 +22,13 @@ public class MovieModel implements Parcelable{
         backdrop_path = in.readString();
     }
 
-    public MovieModel(Cursor cursor) {
-        this.id = getColumnInt(cursor, _ID);
-        this.title = getColumnString(cursor, TITLE);
-        this.poster_path = getColumnString(cursor, POSTER_PATH);
-        this.release_date = getColumnString(cursor, DATE);
-        this.overview = getColumnString(cursor, OVERVIEW);
-    }
+//    public MovieModel(Cursor cursor) {
+//        this.id = getColumnInt(cursor, _ID);
+//        this.title = getColumnString(cursor, TITLE);
+//        this.poster_path = getColumnString(cursor, POSTER_PATH);
+//        this.release_date = getColumnString(cursor, DATE);
+//        this.overview = getColumnString(cursor, OVERVIEW);
+//    }
 
     public static final Creator<MovieModel> CREATOR = new Creator<MovieModel>() {
         @Override

@@ -6,10 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <permission
-    android:name="com.example.moviecatalogue.READ_DATABASE"
-    android:protectionLevel="normal" />
-    <permission
-        android:name="com.example.moviecatalogue.WRITE_DATABASE"
+        android:name="com.example.moviecatalogue.prov.READ_DATABASE"
         android:protectionLevel="normal" />
 
     <application
@@ -20,11 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <provider
-            android:name=".provider.MovieProvider"
-            android:authorities="com.example.moviecatalogue"
-            android:exported="true"
-            android:readPermission="com.example.moviecatalogue.READ_DATABASE"
-            android:writePermission="com.example.moviecatalogue.WRITE_DATABASE">
+            android:name=".prov.Provider"
+            android:authorities="com.example.moviecatalogue.prov"
+            android:enabled="true"
+            android:exported="true">
         </provider>
 
         <receiver android:name=".widget.FavoriteWidget">
@@ -60,11 +56,7 @@
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
         <receiver
-            android:name=".alarm.DailyAlarm"
-            android:enabled="true"
-            android:exported="false" />
-        <receiver
-            android:name=".alarm.ReleaseMovieAlarm"
+            android:name=".alarm.ReleaseAlarm"
             android:enabled="true"
             android:exported="false" />
     </application>

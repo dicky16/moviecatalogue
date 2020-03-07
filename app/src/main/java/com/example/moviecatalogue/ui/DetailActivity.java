@@ -1,8 +1,5 @@
 package com.example.moviecatalogue.ui;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,8 +12,6 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.moviecatalogue.R;
-import com.example.moviecatalogue.helper.MovieHelper;
-import com.example.moviecatalogue.helper.ProviderEntity;
 import com.example.moviecatalogue.model.FavoriteMovieModel;
 import com.example.moviecatalogue.model.FavoriteTvModel;
 import com.example.moviecatalogue.model.MovieModel;
@@ -27,21 +22,12 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
-
-import static com.example.moviecatalogue.helper.DatabaseContract.CONTENT_URI;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.DATE;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.OVERVIEW;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.POSTER_PATH;
-import static com.example.moviecatalogue.helper.DatabaseContract.MovieColumns.TITLE;
-
 
 public class DetailActivity extends AppCompatActivity {
 
     private FavMovieViewModel favMovieViewModel;
     private FavTvViewModel favTvViewModel;
     //array movie provider
-    private ArrayList<ProviderEntity> listMovieProvider = new ArrayList<>();
 
     public static final String KEY_EXTRA_FAV_MOVIE = "extra_fav_movie";
     public static final String KEY_EXTRA_FAV_TV = "extra_fav_tv";
@@ -51,7 +37,6 @@ public class DetailActivity extends AppCompatActivity {
     private TextView overview,title,date;
 
     //sqlite
-    private MovieHelper movieHelper;
     MovieModel movieModel;
 
     @Override
@@ -64,19 +49,6 @@ public class DetailActivity extends AppCompatActivity {
         overview = findViewById(R.id.tv_overview);
         title = findViewById(R.id.tv_judul);
         date = findViewById(R.id.tv_date);
-        //open sqlite
-        movieHelper = new MovieHelper(this);
-        movieHelper.open();
-        Uri uri = getIntent().getData();
-        if (uri!=null) {
-            Cursor cursor = getContentResolver().query(uri, null,null,null, null);
-            if (cursor!=null) {
-                if (cursor.moveToFirst()) {
-                    movieModel = new MovieModel(cursor);
-                    cursor.close();
-                }
-            }
-        }
 
         FloatingActionButton btnAddFav = findViewById(R.id.btn_add_fav);
         FloatingActionButton btnDelFav = findViewById(R.id.btn_delete_fav);
@@ -241,7 +213,6 @@ public class DetailActivity extends AppCompatActivity {
             release_date = movieModel.getRelease_date();
             if (favMovieViewModel != null){
                 favMovieViewModel.insert(new FavoriteMovieModel(id, title, poster_path, overview, release_date));
-                addFavProvider(movieModel);
                 Toast.makeText(this, R.string.added, Toast.LENGTH_SHORT).show();
                 finish();
             }
@@ -264,27 +235,6 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-    private void addFavProvider(MovieModel providerEntity) {
-        String titleMovie = providerEntity.getTitle();
-        String overView = providerEntity.getOverview();
-        String releaseDate = providerEntity.getRelease_date();
-        String imagePoster = providerEntity.getPoster_path();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(TITLE, titleMovie);
-        contentValues.put(OVERVIEW, overView);
-        contentValues.put(DATE, releaseDate);
-        contentValues.put(POSTER_PATH, imagePoster);
-        getContentResolver().insert(CONTENT_URI,contentValues);
-//        Toast.makeText(this, "success", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (movieHelper != null){
-            movieHelper.close();
-        }
-    }
 
 }
 
